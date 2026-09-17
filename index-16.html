@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SZR Systems — Fejlesztés alatt</title>
+<meta name="description" content="Az SZR Systems weboldala jelenleg fejlesztés alatt áll. Hamarosan visszatérünk.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500;125,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0e10;
+  --panel:#131417;
+  --silver:#c7ccd4;
+  --silver-dim:#7d838d;
+  --line:#25272c;
+  --accent:#e8ebef;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  font-stretch:125%;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:6vh 6vw 8vh;
+  position:relative;
+  overflow:hidden;
+}
+/* giant outlined wordmark, like the silver duplex card */
+.mark{
+  position:absolute;
+  top:50%;
+  left:-2vw;
+  transform:translateY(-58%);
+  font-weight:800;
+  font-size:clamp(11rem,34vw,30rem);
+  line-height:.85;
+  letter-spacing:-.02em;
+  color:transparent;
+  -webkit-text-stroke:1.5px #3a3e45;
+  user-select:none;
+  pointer-events:none;
+  white-space:nowrap;
+}
+.mark span{
+  -webkit-text-stroke:0;
+  color:#1b1d21;
+}
+.content{position:relative;max-width:560px}
+.badge{
+  display:inline-block;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:var(--silver-dim);
+  font-size:.78rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  padding:8px 14px;
+  margin-bottom:22px;
+}
+h1{
+  font-weight:800;
+  font-size:clamp(1.7rem,4.2vw,2.6rem);
+  line-height:1.12;
+  color:var(--accent);
+  margin-bottom:16px;
+}
+p.lead{
+  color:var(--silver-dim);
+  font-weight:500;
+  font-size:1.02rem;
+  line-height:1.65;
+  margin-bottom:34px;
+}
+.contact{
+  border-top:1px solid var(--line);
+  padding-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 46px;
+}
+.contact .item{font-size:.95rem}
+.contact .label{
+  display:block;
+  color:var(--silver-dim);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+.contact a{color:var(--accent);text-decoration:none;border-bottom:1px solid #3a3e45;padding-bottom:1px}
+.contact a:hover{border-color:var(--accent)}
+footer{
+  border-top:1px solid var(--line);
+  padding:18px 6vw;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  color:var(--silver-dim);
+  font-size:.8rem;
+  letter-spacing:.06em;
+}
+@media(max-width:640px){
+  .mark{top:38%;font-size:42vw}
+  main{justify-content:flex-end;padding-bottom:6vh}
+  footer{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="mark" aria-hidden="true">SZ<span>R</span></div>
+  <div class="content">
+    <span class="badge">Fejlesztés alatt</span>
+    <h1>Az oldalunk jelenleg megújul.</h1>
+    <p class="lead">Az SZR Systems weboldala rövid ideig nem elérhető, mert egy új változaton dolgozunk. Kérdés esetén az alábbi elérhetőségeken állunk rendelkezésre.</p>
+    <div class="contact">
+      <div class="item">
+        <span class="label">E-mail</span>
+        <a href="mailto:oliver@szrsystems.hu">oliver@szrsystems.hu</a>
+      </div>
+      <div class="item">
+        <span class="label">Telefon</span>
+        <a href="tel:+36305515155">+36 30 551 5155</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <span>SZR Systems</span>
+  <span>szrsystems.hu</span>
+</footer>
+</body>
+</html>
